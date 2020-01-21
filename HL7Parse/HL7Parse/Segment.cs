@@ -8,6 +8,11 @@ namespace HL7Parse
         private readonly string _Value;
         private readonly List<Field> _FieldList;
 
+        /// <summary>
+        /// Parses a HL7 Segment into Fields and adds them to the _FieldList.
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <param name="Delimiters"></param>
         public Segment(string Value, Delimiters Delimiters)
         {
             _Value = Value;
@@ -27,6 +32,9 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves the entire Segment in String format.
+        /// </summary>
         public string Value
         {
             get
@@ -42,6 +50,11 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves a Field from the _FieldList using the provided Integer as the index.
+        /// </summary>
+        /// <param name="Index"></param>
+        /// <returns></returns>
         public Field GetField(int Index)
         {
             Index = Index - 1;

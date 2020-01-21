@@ -5,12 +5,35 @@ namespace HL7Parse
 {
     public class Delimiters
     {
-        public char Field;
-        public char Component;
-        public char Repeat;
-        public char Escape;
-        public char Subcomponent;
+        /// <summary>
+        /// This property returns the Field Delimiter char.
+        /// </summary>
+        public readonly char Field;
 
+        /// <summary>
+        /// This property returns the Component Delimiter char.
+        /// </summary>
+        public readonly char Component;
+
+        /// <summary>
+        /// This property returns the Repeat Delimiter char.
+        /// </summary>
+        public readonly char Repeat;
+
+        /// <summary>
+        /// This property returns the Escape Delimiter char.
+        /// </summary>
+        public readonly char Escape;
+
+        /// <summary>
+        /// This property returns the Subcomponent Delimiter char.
+        /// </summary>
+        public readonly char Subcomponent;
+
+        /// <summary>
+        /// Parses a HL7 message and retrieves the HL7 Delimiter fields.
+        /// </summary>
+        /// <param name="hl7message"></param>
         public Delimiters(string hl7message)
         {
             try

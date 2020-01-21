@@ -8,6 +8,11 @@ namespace HL7Parse
         private readonly string _Value;
         private readonly List<Component> _ComponentList;
 
+        /// <summary>
+        /// Parses a HL7 Field into Components and adds them to the _ComponentList.
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <param name="Delimiters"></param>
         public Repeat(string Value, Delimiters Delimiters)
         {
             _Value = Value;
@@ -18,6 +23,9 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves the entire Repeat in String format.
+        /// </summary>
         public string Value
         {
             get
@@ -33,6 +41,11 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves a Component from the _ComponentList using the provided Integer as the index.
+        /// </summary>
+        /// <param name="Index"></param>
+        /// <returns></returns>
         public Component GetComponent(int Index)
         {
             Index = Index - 1;

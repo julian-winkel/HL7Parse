@@ -4,11 +4,18 @@
     {
         private readonly string _Value;
 
+        /// <summary>
+        /// Subcomponent constructor.
+        /// </summary>
+        /// <param name="Value"></param>
         public Subcomponent(string Value)
         {
             _Value = Value;
         }
 
+        /// <summary>
+        /// Retrieves the entire Subcomponent in String format.
+        /// </summary>
         public string Value
         {
             get

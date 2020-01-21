@@ -8,6 +8,11 @@ namespace HL7Parse
         private readonly string _Value;
         private readonly List<Subcomponent> _SubcomponentList;
 
+        /// <summary>
+        /// Parses a HL7 Component into Subcomponent and adds them to the _SubcomponentList.
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <param name="Delimiters"></param>
         public Component(string Value, Delimiters Delimiters)
         {
             _Value = Value;
@@ -18,6 +23,9 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves the entire Component in String format.
+        /// </summary>
         public string Value
         {
             get
@@ -33,6 +41,11 @@ namespace HL7Parse
             }
         }
 
+        /// <summary>
+        /// Retrieves a Subcomponent from the _SubcomponentList using the provided Integer as the index.
+        /// </summary>
+        /// <param name="Index"></param>
+        /// <returns></returns>
         public Subcomponent GetSubcomponent(int Index)
         {
             Index = Index - 1;
